@@ -9,17 +9,21 @@ body {
 }
 
 .topnav {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  background-color: none;
   overflow: hidden;
-  background-color: #000000da; /* this is the top bar */
+  margin-top: 5px;
 }
 
 .topnav a {
-  float: left;
   color: #ffffff;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: underline overline;
   font-size: 17px;
+  border-radius: 15px; /* Added to make the boxes round */
+  margin: 0 5px;
 }
 
 .topnav a:hover {
@@ -27,23 +31,25 @@ body {
   color: #083ccc;
 }
 
-.topnav a.active {
+.topnav a.home {
   background-color: #0856cc;
   color: #ffffff;
 }
 
-
+.topnav a.pages {
+  background-color: #d5edf7; /* This is the box the text it is is when not active */
+  color: #32a9db; /* This is the text that is not active */
+}
 
 </style> 
 </head>
 <body>
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a class='active' href="page1.html">page 1</a>
-  <a href="page2.html">page 2</a>
+  <a class="pages" href="page1.html">page 1</a>
+  <a class="home" href="index.html">Home</a>
+  <a class="pages" href="page2.html">page 2</a>
 </div>
-
 
 <div style="padding-left:16px">
   <h2>Page 1</h2>
